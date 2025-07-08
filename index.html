@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript & HTML Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .demo-section {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            margin: 5px;
+            font-size: 16px;
+        }
+        #output {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-family: 'Courier New', monospace;
+        }
+        .task-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-item.completed {
+            opacity: 0.6;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Multi-Language Demo</h1>
+        
+        <div class="demo-section">
+            <h2>📝 TypeScript Todo App</h2>
+            <div>
+                <input type="text" id="taskInput" placeholder="Enter a new task..." />
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+            <div id="taskList"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🧮 TypeScript Calculator</h2>
+            <div>
+                <input type="text" id="num1" placeholder="Number 1" />
+                <input type="text" id="num2" placeholder="Number 2" />
+            </div>
+            <div>
+                <button onclick="calculate('add')">Add (+)</button>
+                <button onclick="calculate('subtract')">Subtract (-)</button>
+                <button onclick="calculate('multiply')">Multiply (×)</button>
+                <button onclick="calculate('divide')">Divide (÷)</button>
+            </div>
+            <div id="output"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🎲 Random Features</h2>
+            <button id="randomQuoteBtn">Get Random Quote</button>
+            <button id="colorChangeBtn">Change Background</button>
+            <div id="quoteDisplay"></div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>☕ Java Integration Info</h2>
+            <p>Check the console and the Java files in this project!</p>
+            <button onclick="showJavaInfo()">Show Java Project Info</button>
+        </div>
+    </div>
+    
+    <script src="dist/app.js"></script>
+</body>
+</html>
